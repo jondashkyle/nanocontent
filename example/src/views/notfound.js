@@ -5,7 +5,7 @@ module.exports = view
 function view (state, emit) {
   return html`
     <body class="m0 ff-sans">
-      yo whats good
+      not found
     </body>
   `
 }

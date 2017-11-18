@@ -7,7 +7,7 @@ function view (state, emit) {
   return html`
     <body class="m0 ff-sans bgc-black fc-white">
       <div>custom ${page.name}</div>
-      <a href="/content">back</a>
+      <a href="/">back</a>
     </body>
   `
 }
