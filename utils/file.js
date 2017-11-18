@@ -81,6 +81,6 @@ function getFileMeta (opts) {
 function formatUrl (pathFile, pathRoot, pathSiteParent) {
   pathFile = pathFile.replace(pathRoot, '')
   if (pathSiteParent) pathFile = pathFile.replace(pathSiteParent, '')
-  pathFile = slash(pathFile)
+  pathFile = slash(path.join('/', pathFile))
   return pathFile || '/'
 }
