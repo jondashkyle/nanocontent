@@ -4,6 +4,7 @@ var slash = require('slash')
 var path = require('path')
 
 module.exports = {
+  formatUrl: formatUrl,
   filterFile: filterFile,
   getFileType: getFileType,
   getFileMeta: getFileMeta,
@@ -65,7 +66,8 @@ function getFileMeta (opts) {
   var output = { }
   var ext = path.extname(opts.pathFile)
   output.name = path.basename(opts.pathFile, ext)
-  output.url = slash(formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot))
+  output.path = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot)
+  output.url = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot, opts.pathSiteParent)
 
   if (ext) {
     output.extension = ext
@@ -76,6 +78,9 @@ function getFileMeta (opts) {
   return output
 }
 
-function formatUrl (pathFile, pathRoot) {
-  return pathFile.replace(pathRoot, '')
+function formatUrl (pathFile, pathRoot, pathSiteParent) {
+  pathFile = pathFile.replace(pathRoot, '')
+  if (pathSiteParent) pathFile = pathFile.replace(pathSiteParent, '')
+  pathFile = slash(pathFile)
+  return pathFile || '/'
 }
