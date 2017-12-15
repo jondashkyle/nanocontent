@@ -119,3 +119,7 @@ Each method accepts an `object` containing options as it’s second argument.
 Pass a custom filesystem to be used to read directories and files. Required methods are `fs.readdir`, `fs.writedir`, `fs.readFile` and `fs.writeFile`. If using synchronous methods please provide the appropriate `Sync` methods. Fallback to Node’s `fs` module if undefined.
 
 ### `.pathRoot` string
+
+## todo
+
+- [ ] async if no callback return promise (see https://github.com/brianleroux/tiny-json-http/blob/master/_read.js)
