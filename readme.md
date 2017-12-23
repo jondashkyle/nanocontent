@@ -15,7 +15,7 @@ uhhh yeah need to communicate this clearly.
 
 ## Usage
 
-Format some plain text files using [smarkt](#hi) fields.
+Format some plain text files using [smarkt](https://github.com/jondashkyle/smarkt) fields.
 
 ```
 title: Technopastoral
@@ -49,7 +49,7 @@ var hypha = require('hypha')
 var site = hypha.readSiteSync('./content')
 ```
 
-Each directory becomes a path containing a sub-object of the content in your text file. Map over the object keys (paths) to add routes to a router and pass the content object. Huzzah.
+Each directory becomes a path containing a sub-object of the content in your text file. 
 
 ```
 {
@@ -57,6 +57,32 @@ Each directory becomes a path containing a sub-object of the content in your tex
   '/about': { },
   '/blog': { },
   '/blog/30-01-19-technopastoral': { }
+}
+```
+
+Map over the object keys to add routes to a router, then pass the content object. Huzzah.
+
+## API
+
+### `.readSiteSync(path, [options])`
+
+### `.readeSite(path, [options || callback], [callback])`
+
+## Options
+
+```
+{
+  ignore: /(^[.#]|(?:__|~)$)/,
+  encoding: 'utf8',
+  file: 'index.txt',
+  filetypes: {
+    asset: ['.css', '.js'],
+    archive: ['.zip'],
+    audio: ['.mp3', '.wav', '.aiff'],
+    document: ['.pdf'],
+    image: ['gif', '.jpg', '.jpeg', '.png', '.svg'],
+    video: ['.mp4', '.mov']
+  }
 }
 ```
 
