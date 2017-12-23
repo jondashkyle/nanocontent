@@ -9,11 +9,11 @@ function store (site) {
 
     site.forEach(function (page) {
       // set view and extend state
-      var view = views[page.view] || views.main 
+      var view = views[page.view] || views.main
       state.content[page.url] = page
 
       app.route(page.url, function (state, emit) {
-        return view(xtend(state, { page: page }) , emit)
+        return view(xtend(state, { page: page }), emit)
       })
     })
   }

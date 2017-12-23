@@ -27,12 +27,12 @@ function content (state, emitter) {
   site.forEach(function (page) {
     // set view or fallback
     var pageUrl = page.url
-    var view = views[page.view] || views.main 
+    var view = views[page.view] || views.main
 
     // extend state & create route
     state.content[pageUrl] = page
     app.route(pageUrl, function (state, emit) {
-      return view(xtend(state, { page: page }) , emit)
+      return view(xtend(state, { page: page }), emit)
     })
   })
 }

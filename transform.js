@@ -45,7 +45,7 @@ function locksleyTransform (filename) {
         stream.push(JSON.stringify(siteSync, { }, 2))
         stream.push(null)
         return stream
-      } 
+      }
     }
   }, {
     vars: vars,
