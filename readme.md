@@ -64,9 +64,9 @@ Map over the object keys to add routes to a router, then pass the content object
 
 ## API
 
-### `.readSiteSync(path, [options])`
+#### `.readSiteSync(path, [options])`
 
-### `.readeSite(path, [options || callback], [callback])`
+#### `.readeSite(path, [options || callback], [callback])`
 
 ## Options
 
@@ -85,6 +85,10 @@ Map over the object keys to add routes to a router, then pass the content object
   }
 }
 ```
+
+## Example
+
+A demo site is included. Open the `hypha/example` dir and `npm install`. The example uses [Bankai](https://github.com/choojs/bankai). Run `npm start` to spin up a Bankai server and mess around.
 
 ## Todo
 
