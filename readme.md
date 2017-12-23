@@ -1,10 +1,8 @@
-<h1 align="center">hypha</h1>
+<h1 align="center">⛺️ hypha</h1>
 
 <div align="center"><b>UNDER CONSTRUCTION</b></div>
 
 <div align="center">Transform a directory of content into JSON</div>
-
-## Philosophy
 
 ## Usage
 
