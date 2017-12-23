@@ -4,7 +4,6 @@ var views = require('../views')
 module.exports = store
 
 function store (site) {
-  console.log(site)
   return function content (state, emitter, app) {
     state.content = { }
 

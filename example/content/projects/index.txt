@@ -1,9 +1,0 @@
-title: Projects
-----
-tags:
-  - one
-  - two
-----
-text: yeah whats good
-
-not much tho!

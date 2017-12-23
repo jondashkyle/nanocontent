@@ -1,14 +1,14 @@
 {
-  "name": "locksley",
-  "version": "1.0.0",
-  "description": "nice",
+  "name": "hypha",
+  "version": "0.0.1",
+  "description": "Make a site yo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "glob": "^7.1.2",
     "js-yaml": "^3.10.0",
