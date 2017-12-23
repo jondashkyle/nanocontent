@@ -4,11 +4,11 @@ var xtend = require('xtend')
 var path = require('path')
 var fs = require('fs')
 
-var locksley = require('.')
+var hypha = require('.')
 
-module.exports = locksleyTransform
+module.exports = transform
 
-function locksleyTransform (filename) {
+function transform (filename) {
   if (/\.json$/.test(filename)) return through()
 
   var vars = {
@@ -17,13 +17,13 @@ function locksleyTransform (filename) {
   }
 
   var sm = staticModule({
-    locksley: {
+    hypha: {
       readPageSync: function (pathPage, opts) {
         opts = opts || { }
         opts.pathRoot = opts.pathRoot || vars.__dirname
 
         var pathDir = path.isAbsolute(pathPage) ? pathPage : path.join(vars.__dirname, pathPage)
-        var pageSync = locksley.readPageSync(pathDir, opts)
+        var pageSync = hypha.readPageSync(pathDir, opts)
 
         var stream = through()
         stream.push(JSON.stringify(pageSync, { }, 2))
@@ -39,7 +39,7 @@ function locksleyTransform (filename) {
         }
 
         var pathDir = path.isAbsolute(pathSite) ? pathSite : path.join(vars.__dirname, pathSite)
-        var siteSync = locksley.readSiteSync(pathDir, opts)
+        var siteSync = hypha.readSiteSync(pathDir, opts)
 
         var stream = through()
         stream.push(JSON.stringify(siteSync, { }, 2))
