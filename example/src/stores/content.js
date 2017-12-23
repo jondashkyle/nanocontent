@@ -1,3 +1,4 @@
+var objectKeys = require('object-keys')
 var xtend = require('xtend')
 var views = require('../views')
 
@@ -7,8 +8,9 @@ function store (site) {
   return function content (state, emitter, app) {
     state.content = { }
 
-    site.forEach(function (page) {
+    objectKeys(site).forEach(function (path) {
       // set view and extend state
+      var page = site[path]
       var view = views[page.view] || views.main
       state.content[page.url] = page
 
