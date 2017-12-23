@@ -4,11 +4,19 @@
   "description": "Make a site yo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard --fix && node test.js | colortape"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jondashkyle/smarkt/issues"
+  },
+  "homepage": "https://github.com/jondashkyle/hypha#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jondashkyle/hypha.git"
+  },
   "dependencies": {
     "glob": "^7.1.2",
     "js-yaml": "^3.10.0",
@@ -18,5 +26,10 @@
     "static-module": "^1.5.0",
     "through2": "^2.0.3",
     "xtend": "^4.0.1"
+  },
+  "devDependencies": {
+    "colortape": "^0.1.2",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
   }
 }
