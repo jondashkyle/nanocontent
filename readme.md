@@ -4,6 +4,15 @@
 
 <div align="center">Transform a directory of content into JSON</div>
 
+## In a nutshell
+
+- Store all of your content in a directory
+- Each page is a sub-directory, and so on
+- The content for each page is stored in a text file
+- Use the path to each page as a URL in a router
+
+uhhh yeah need to communicate this clearly.
+
 ## Usage
 
 Format some plain text files using [smarkt](#hi) fields.
