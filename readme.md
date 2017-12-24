@@ -86,9 +86,17 @@ Map over the object keys to add routes to a router, then pass the content object
 }
 ```
 
+## Transform
+
+```
+browserify -t hypha/transform
+```
+
+A browserify transform located at `hypha/transform` is included to staticly inline the module output.
+
 ## Example
 
-A demo site is included. Open the `hypha/example` dir and `npm install`. The example uses [Bankai](https://github.com/choojs/bankai). Run `npm start` to spin up a Bankai server and mess around.
+A demo site is included. Open the `hypha/example` dir and `npm install`. The example uses [Bankai](https://github.com/choojs/bankai). Run `npm start` to spin up a Bankai server and mess around. Run `bankai build` to build a fully static site.
 
 ## Todo
 
