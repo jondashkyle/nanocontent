@@ -1,7 +1,7 @@
 {
   "name": "hypha",
-  "version": "0.0.1",
-  "description": "Make a site yo",
+  "version": "0.0.2",
+  "description": "transform a directory of content into JSON",
   "main": "index.js",
   "scripts": {
     "test": "standard --fix && node test.js | colortape"
