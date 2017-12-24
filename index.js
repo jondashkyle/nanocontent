@@ -23,9 +23,9 @@ function readFileSync (pathFile, opts, callback) {
   return lib.readFileSync(pathFile, opts)
 }
 
-function readFiles (pathFile, opts, callback) {
+function readFiles (files, pathSite, opts, callback) {
   opts = xtend(opts, { fs: fs })
-  return lib.readFiles(pathFile, opts, callback)
+  return lib.readFiles(files, pathSite, opts, callback)
 }
 
 function readFilesSync (pathFile, opts, callback) {
