@@ -2,7 +2,7 @@
 
 <div align="center"><b>UNDER CONSTRUCTION</b></div>
 
-<div align="center">Transform a directory of content into JSON</div>
+<div align="center">Transform folders and files into JSON</div>
 
 ## In a nutshell
 
