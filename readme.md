@@ -64,9 +64,17 @@ Map over the object keys to add routes to a router, then pass the content object
 
 ## API
 
-#### `.readSiteSync(path, [options])`
+#### `.readFiles(paths, [options || callback], [callback]))`
 
-#### `.readeSite(path, [options || callback], [callback])`
+Pass an array of paths to files and folders which will be read. Returns an object.
+
+#### `.readFilesSync(paths, [options])`
+
+#### `.readSite(path, [options || callback], [callback])`
+
+Pass the path to a directory containing files.
+
+#### `.readSiteSync(path, [options])`
 
 ## Options
 
