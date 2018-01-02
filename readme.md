@@ -70,21 +70,13 @@ Map over the object keys to add routes to a router, then pass the content object
 
 ## Options
 
-```
-{
-  ignore: /(^[.#]|(?:__|~)$)/,
-  encoding: 'utf8',
-  file: 'index.txt',
-  filetypes: {
-    asset: ['.css', '.js'],
-    archive: ['.zip'],
-    audio: ['.mp3', '.wav', '.aiff'],
-    document: ['.pdf'],
-    image: ['gif', '.jpg', '.jpeg', '.png', '.svg'],
-    video: ['.mp4', '.mov']
-  }
-}
-```
+#### `fs`
+
+Provide a custom implementation of `fs`. Ensure the `mkdir` `readdir` `writeFile` and `readFile` methods are available. This is useful for replacing Node’s `fs` with Dat’s API, for instance.
+
+#### `parse`
+
+Substitute `smarkt` with your own parser. Must be able to transform a plain text file into a JSON object.
 
 ## Transform
 
@@ -102,4 +94,4 @@ A demo site is included. Open the `hypha/example` dir and `npm install`. The exa
 
 - [ ] Tests
 - [ ] Async callback/promise fallback
-- [ ] Modularize read function for JSON/Smarkt/Custom
+- [x] Modularize read function for JSON/Smarkt/Custom
