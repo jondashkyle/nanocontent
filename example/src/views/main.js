@@ -1,8 +1,8 @@
 var objectValues = require('object-values')
-var markdown = require('markdown-it')
+var Markdown = require('markdown-it')
 var html = require('choo/html')
 var raw = require('bel/raw')
-var md = new markdown()
+var md = new Markdown()
 
 module.exports = view
 

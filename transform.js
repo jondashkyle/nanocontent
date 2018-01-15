@@ -1,8 +1,6 @@
 var staticModule = require('static-module')
 var through = require('through2')
-var xtend = require('xtend')
 var path = require('path')
-var fs = require('fs')
 
 var hypha = require('.')
 
