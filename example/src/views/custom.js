@@ -4,7 +4,6 @@ module.exports = view
 
 function view (state, emit) {
   var page = state.page || { }
-  console.log(page)
   return html`
     <body class="m0 ff-sans bgc-black fc-white">
       <div>custom ${page.name}</div>
