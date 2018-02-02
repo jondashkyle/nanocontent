@@ -68,6 +68,7 @@ function getFileMeta (opts) {
   output.name = path.basename(opts.pathFile, ext)
   output.path = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot)
   output.url = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot, opts.pathSiteParent)
+  output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
 
   if (ext) {
     output.extension = ext
