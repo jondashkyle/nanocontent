@@ -4,7 +4,7 @@
   "description": "transform a directory of content into JSON",
   "main": "index.js",
   "scripts": {
-    "test": "standard --fix && node test.js | colortape"
+    "test": "standard --fix; ava"
   },
   "keywords": [],
   "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
@@ -22,6 +22,7 @@
     "js-yaml": "^3.10.0",
     "object-keys": "^1.0.11",
     "object-values": "^1.0.0",
+    "pify": "^3.0.0",
     "slash": "^1.0.0",
     "smarkt": "0.0.5",
     "static-module": "^1.5.0",
@@ -29,8 +30,7 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "colortape": "^0.1.2",
-    "standard": "^10.0.3",
-    "tape": "^4.8.0"
+    "ava": "^0.25.0",
+    "standard": "^10.0.3"
   }
 }
