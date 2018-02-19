@@ -15,9 +15,9 @@ test('readPage works', async function (t) {
 })
 
 test('readPageSync and readPage outputs are the same', async function (t) {
-  var sync = hypha.readPageSync('example/content/about')
-  var async = await hypha.readPage('example/content/about')
-  t.deepEqual(sync, async)
+  var syncPage = hypha.readPageSync('example/content/about')
+  var asyncPage = await hypha.readPage('example/content/about')
+  t.deepEqual(syncPage, asyncPage)
 })
 
 test('readSiteSync works', function (t) {
@@ -27,7 +27,7 @@ test('readSiteSync works', function (t) {
 })
 
 test('readSiteSync and readSite outputs are the same', async function (t) {
-  var sync = hypha.readSiteSync('example/content')
-  var async = await hypha.readSiteSync('example/content')
-  t.deepEqual(sync, async)
+  var syncSite = hypha.readSiteSync('example/content')
+  var asyncSite = await hypha.readSiteSync('example/content')
+  t.deepEqual(syncSite, asyncSite)
 })
