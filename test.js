@@ -28,6 +28,6 @@ test('readSiteSync works', function (t) {
 
 test('readSiteSync and readSite outputs are the same', async function (t) {
   var syncSite = hypha.readSiteSync('example/content')
-  var asyncSite = await hypha.readSiteSync('example/content')
+  var asyncSite = await hypha.readSite('example/content')
   t.deepEqual(syncSite, asyncSite)
 })
