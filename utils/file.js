@@ -18,11 +18,8 @@ function sortChildren (result, active) {
   result.files = result.files || [ ]
   result.pages = result.pages || [ ]
 
-  if (ext) {
-    result.files.push(active)
-  } else {
-    result.pages.push(active)
-  }
+  if (ext) result.files.push(active)
+  else result.pages.push(active)
 
   return result
 }
@@ -71,7 +68,7 @@ function getFileMeta (opts) {
   output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
 
   if (ext) {
-    output.extension = ext
+    output.extension = ext.toLowerCase()
     output.filename = path.basename(opts.pathFile)
     output.type = getFileType(output.extension, opts.filetypes)
   }
