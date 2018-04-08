@@ -88,6 +88,10 @@ Provide a custom implementation of `fs`. Ensure the `mkdir` `readdir` `writeFile
 
 Substitute `smarkt` with your own parser. Must be able to transform a plain text file into a JSON object.
 
+#### `parent`
+
+Remove part of the `url` for pretty printing. For example, if your content lives in `/content`, but you don’t want to prefix all of your `urls` with `/content`, use `parent` to clean it up. Value can be a string or boolean. If `true`, the `path` of your initial call is used.
+
 ## Transform
 
 ```
