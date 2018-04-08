@@ -30,3 +30,9 @@ test('readSiteSync and readSite outputs are the same', async function (t) {
   var asyncSite = await hypha.readSite('example/content')
   t.deepEqual(syncSite, asyncSite)
 })
+
+test('readSiteSync and readSite outputs are the same with parent option', async function (t) {
+  var syncSite = hypha.readSiteSync('example/content', { parent: true })
+  var asyncSite = await hypha.readSite('example/content', { parent: true })
+  t.deepEqual(syncSite, asyncSite)
+})
