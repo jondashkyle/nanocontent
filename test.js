@@ -1,5 +1,4 @@
 var test = require('ava')
-
 var hypha = require('.')
 
 test('readPageSync works', function (t) {
@@ -22,12 +21,18 @@ test('readPageSync and readPage outputs are the same', async function (t) {
 
 test('readSiteSync works', function (t) {
   var site = hypha.readSiteSync('example/content')
-  t.is(site['/'].title, 'Example')
-  t.is(site['/about'].title, 'About')
+  t.is(site['/example/content'].title, 'Example')
+  t.is(site['/example/content/about'].title, 'About')
 })
 
 test('readSiteSync and readSite outputs are the same', async function (t) {
   var syncSite = hypha.readSiteSync('example/content')
   var asyncSite = await hypha.readSite('example/content')
+  t.deepEqual(syncSite, asyncSite)
+})
+
+test('readSiteSync and readSite outputs are the same with parent option', async function (t) {
+  var syncSite = hypha.readSiteSync('example/content', { parent: true })
+  var asyncSite = await hypha.readSite('example/content', { parent: true })
   t.deepEqual(syncSite, asyncSite)
 })

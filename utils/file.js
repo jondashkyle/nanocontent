@@ -1,6 +1,6 @@
 var objectKeys = require('object-keys')
 var assert = require('assert')
-var slash = require('slash')
+var slash = require('normalize-path')
 var path = require('path')
 
 module.exports = {
