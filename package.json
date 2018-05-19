@@ -1,21 +1,21 @@
 {
-  "name": "hypha",
+  "name": "nanocontent",
   "version": "0.4.5",
-  "description": "transform a directory of content into JSON",
+  "description": "read a directory of content into an object",
   "main": "index.js",
   "scripts": {
     "test": "standard --fix; ava"
   },
   "keywords": [],
   "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jondashkyle/smarkt/issues"
+    "url": "https://github.com/jondashkyle/nanocontent/issues"
   },
-  "homepage": "https://github.com/jondashkyle/hypha#readme",
+  "homepage": "https://github.com/jondashkyle/nanocontent#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jondashkyle/hypha.git"
+    "url": "git+https://github.com/jondashkyle/nanocontent.git"
   },
   "dependencies": {
     "glob": "^7.1.2",
