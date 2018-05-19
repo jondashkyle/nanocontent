@@ -1,15 +1,26 @@
-<h1 align="center">⛺️ hypha</h1>
+<h1 align="center">nanocontent</h1>
 
-<div align="center"><b>UNDER CONSTRUCTION</b></div>
+<div align="center">
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square" alt="Stability" />
+  </a>
+  <a href="https://www.npmjs.com/package/nanocontent">
+    <img src="https://img.shields.io/npm/v/nanocontent.svg?style=flat-square" alt="NPM version" />
+  </a>
+</div>
 
-<div align="center">Transform folders and files into JSON</div>
+<br />
 
-## In a nutshell
+**work in progress...**
 
 - Store all of your content in a directory
 - Each directory is a page
 - The content for each page is stored in a text file
 - Your file system becomes a router!
+
+```
+npm install nanocontent --save
+```
 
 ## Usage
 
@@ -43,8 +54,8 @@ Organize them within a directory structure alongside media assets.
 Turn the directory into an object.
 
 ```js
-var hypha = require('hypha')
-var site = hypha.readSiteSync('./content')
+var nanocontent = require('nanocontent')
+var site = nanocontent.readSiteSync('./content')
 ```
 
 Each directory becomes a path containing a sub-object of the content in your text file. 
@@ -95,14 +106,14 @@ Remove part of the `url` for pretty printing. For example, if your content lives
 ## Transform
 
 ```
-browserify -t hypha/transform
+browserify -t nanocontent/transform
 ```
 
-A browserify transform located at `hypha/transform` is included to staticly inline the module output.
+A browserify transform located at `nanocontent/transform` is included to staticly inline the module output.
 
 ## Example
 
-A demo site is included. Open the `hypha/example` dir and `npm install`. The example uses [Bankai](https://github.com/choojs/bankai). Run `npm start` to spin up a Bankai server and mess around. Run `bankai build` to build a fully static site.
+A demo site is included. Open the `nanocontent/example` dir and `npm install`. The example uses [Bankai](https://github.com/choojs/bankai). Run `npm start` to spin up a Bankai server and mess around. Run `bankai build` to build a fully static site.
 
 ## Todo
 
