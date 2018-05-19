@@ -13,10 +13,13 @@
 
 **work in progress...**
 
+Introducing flat content state. Read directories of content into an object.
+
 - Store all of your content in a directory
 - Each directory is a page
 - The content for each page is stored in a text file
 - Your file system becomes a router!
+- Pairs nicely with [`nanopage`](https://github.com/jondashkyle/nanopage) for traversing object structure
 
 ```
 npm install nanocontent --save
