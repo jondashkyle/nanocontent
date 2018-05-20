@@ -2,7 +2,7 @@ var staticModule = require('static-module')
 var through = require('through2')
 var path = require('path')
 
-var hypha = require('.')
+var nanocontent = require('.')
 
 module.exports = transform
 
@@ -15,13 +15,13 @@ function transform (filename) {
   }
 
   var sm = staticModule({
-    hypha: {
+    nanocontent: {
       readPageSync: function (pathPage, opts) {
         opts = opts || { }
         opts.pathRoot = opts.pathRoot || vars.__dirname
 
         var pathDir = path.isAbsolute(pathPage) ? pathPage : path.join(vars.__dirname, pathPage)
-        var pageSync = hypha.readPageSync(pathDir, opts)
+        var pageSync = nanocontent.readPageSync(pathDir, opts)
 
         var stream = through()
         stream.push(JSON.stringify(pageSync, { }, 2))
@@ -37,7 +37,7 @@ function transform (filename) {
         }
 
         var pathDir = path.isAbsolute(pathSite) ? pathSite : path.join(vars.__dirname, pathSite)
-        var siteSync = hypha.readSiteSync(pathDir, opts)
+        var siteSync = nanocontent.readSiteSync(pathDir, opts)
 
         var stream = through()
         stream.push(JSON.stringify(siteSync, { }, 2))
