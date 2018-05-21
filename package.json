@@ -4,7 +4,7 @@
   "description": "read a directory of content into an object",
   "main": "index.js",
   "scripts": {
-    "test": "standard --fix; ava"
+    "test": "standard; ava"
   },
   "keywords": [],
   "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
@@ -20,17 +20,17 @@
   "dependencies": {
     "glob": "^7.1.2",
     "js-yaml": "^3.10.0",
-    "normalize-path": "^2.1.1",
+    "normalize-path": "^3.0.0",
     "object-keys": "^1.0.11",
-    "object-values": "^1.0.0",
+    "object-values": "^2.0.0",
     "pify": "^3.0.0",
     "smarkt": "0.0.6",
-    "static-module": "^1.5.0",
+    "static-module": "^2.2.5",
     "through2": "^2.0.3",
     "xtend": "^4.0.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "standard": "^10.0.3"
+    "standard": "^11.0.1"
   }
 }
