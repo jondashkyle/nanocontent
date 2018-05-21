@@ -1,6 +1,6 @@
 var objectKeys = require('object-keys')
-var assert = require('assert')
 var slash = require('normalize-path')
+var assert = require('assert')
 var path = require('path')
 
 module.exports = {
@@ -49,22 +49,21 @@ function getFileType (extension, filetypes) {
 }
 
 function isFile (pathFile) {
-  assert.equal(typeof pathFile, 'string', 'enoki: arg1 pathFile must be type string')
+  assert.equal(typeof pathFile, 'string', 'arg1 pathFile must be type string')
   return path.extname(pathFile) !== ''
 }
 
 function getFileMeta (opts) {
-  assert.equal(typeof opts, 'object', 'enoki: arg1 opts must be type object')
-  assert.equal(typeof opts.pathFile, 'string', 'enoki: arg1 opts.pathFile must be type string')
-  assert.equal(typeof opts.pathParent, 'string', 'enoki: arg1 opts.pathParent must be type string')
-  assert.equal(typeof opts.pathRoot, 'string', 'enoki: arg1 opts.pathRoot must be type string')
-  assert.equal(typeof opts.filetypes, 'object', 'enoki: arg1 opts.filetypes must be type string')
+  assert.equal(typeof opts, 'object', 'arg1 opts must be type object')
+  assert.equal(typeof opts.pathFile, 'string', 'arg1 opts.pathFile must be type string')
+  assert.equal(typeof opts.pathRoot, 'string', 'arg1 opts.pathRoot must be type string')
+  assert.equal(typeof opts.filetypes, 'object', 'arg1 opts.filetypes must be type string')
 
   var output = { }
   var ext = path.extname(opts.pathFile)
   output.name = path.basename(opts.pathFile, ext)
-  output.path = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot)
-  output.url = formatUrl(path.join('/', opts.pathParent, '/', opts.pathFile), opts.pathRoot, opts.pathSiteParent)
+  output.path = formatUrl(opts.pathFile, opts.pathRoot)
+  output.url = formatUrl(opts.pathFile, opts.pathRoot, opts.pathSiteParent)
   output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
 
   if (ext) {
