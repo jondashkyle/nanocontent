@@ -27,8 +27,6 @@ npm install nanocontent --save
 
 ## Usage
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jondashkyle/nanocontent.svg)](https://greenkeeper.io/)
-
 Format some plain text files using [smarkt](https://github.com/jondashkyle/smarkt) fields.
 
 ```
