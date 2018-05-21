@@ -4,7 +4,7 @@
   "description": "read a directory of content into an object",
   "main": "index.js",
   "scripts": {
-    "test": "standard --fix; ava"
+    "test": "standard; ava"
   },
   "keywords": [],
   "author": "Jon-Kyle <contact@jon-kyle.com> (http://jon-kyle.com)",
