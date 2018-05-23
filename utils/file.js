@@ -27,8 +27,7 @@ function sortChildren (result, active) {
 function filterFile (file, index) {
   if (file === '.DS_Store') return false
   if (/(^[.#]|(?:__|~)$)/.test(file)) return false
-  if (file.indexOf(index) >= 0) return false
-  if (file.indexOf('src') >= 0) return false
+  if (path.extname(file) === path.extname(index)) return false
   return true
 }
 
@@ -61,9 +60,10 @@ function getFileMeta (opts) {
 
   var output = { }
   var ext = path.extname(opts.pathFile)
+  var pathFile = slash(path.join(opts.pathParent || '', opts.pathFile))
   output.name = path.basename(opts.pathFile, ext)
-  output.path = formatUrl(opts.pathFile, opts.pathRoot)
-  output.url = formatUrl(opts.pathFile, opts.pathRoot, opts.pathSiteParent)
+  output.path = formatUrl(pathFile, opts.pathRoot)
+  output.url = formatUrl(pathFile, opts.pathRoot, opts.pathSiteParent)
   output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
 
   if (ext) {
