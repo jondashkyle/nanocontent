@@ -63,12 +63,13 @@ var site = nanocontent.readSiteSync('./content')
 
 Each directory becomes a path containing a sub-object of the content in your text file. 
 
-```
+```js
 {
   '/': { },
   '/about': { },
   '/blog': { },
   '/blog/30-01-19-technopastoral': { }
+  '/blog/30-01-19-technopastoral/header.jpg': { }
 }
 ```
 

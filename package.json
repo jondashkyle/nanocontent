@@ -1,6 +1,6 @@
 {
   "name": "nanocontent",
-  "version": "0.4.5",
+  "version": "1.0.0-next3",
   "description": "read a directory of content into an object",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "object-keys": "^1.0.11",
     "object-values": "^2.0.0",
     "pify": "^3.0.0",
+    "promisify-node": "^0.4.0",
     "smarkt": "0.0.6",
     "static-module": "^2.2.5",
     "through2": "^2.0.3",

@@ -1,13 +1,15 @@
+var nanocontent = require('../')
 var css = require('sheetify')
-var hypha = require('hypha')
 var choo = require('choo')
-css('./src/design/index.js')
 
-var site = hypha.readSiteSync('./content', {
+var site = nanocontent.readSiteSync('./content', {
   parent: '/content'
 })
 
 var app = choo()
+
+// design
+css('./src/design/index.js')
 
 // content and routes
 app.use(require('./src/stores/content')(site))
