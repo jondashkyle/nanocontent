@@ -61,10 +61,11 @@ function getFileMeta (opts) {
   var output = { }
   var ext = path.extname(opts.pathFile)
   var pathFile = slash(path.join(opts.pathParent || '', opts.pathFile))
+
   output.name = path.basename(opts.pathFile, ext)
   output.path = formatUrl(pathFile, opts.pathRoot)
   output.url = formatUrl(pathFile, opts.pathRoot, opts.pathSiteParent)
-  output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
+  // output.source = opts.pathSource ? (opts.pathSource + output.path) : output.path
 
   if (ext) {
     output.extension = ext.toLowerCase()
