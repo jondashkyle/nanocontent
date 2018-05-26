@@ -1,6 +1,6 @@
 {
   "name": "nanocontent",
-  "version": "1.0.0-next2",
+  "version": "1.0.0-next3",
   "description": "read a directory of content into an object",
   "main": "index.js",
   "scripts": {
