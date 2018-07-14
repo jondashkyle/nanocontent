@@ -19,6 +19,16 @@ test('readPageSync and readPage outputs are the same', async function (t) {
   t.deepEqual(syncPage, asyncPage)
 })
 
+test('readPage includes image files sizes', function (t) {
+  var page = hypha.readPageSync('example/content/about')
+  for (var file in page.files) {
+    if (page.files[file].type === 'image') {
+      t.is(page.files[file].width, 316)
+      t.is(page.files[file].height, 230)
+    }
+  }
+})
+
 test('readSiteSync works', function (t) {
   var site = hypha.readSiteSync('example/content')
   t.is(site['/example/content'].title, 'Example')
