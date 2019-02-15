@@ -25,7 +25,7 @@
     "object-values": "^2.0.0",
     "pify": "^3.0.0",
     "smarkt": "0.0.6",
-    "static-module": "^2.2.5",
+    "static-module": "^3.0.1",
     "through2": "^2.0.3",
     "xtend": "^4.0.1"
   },
