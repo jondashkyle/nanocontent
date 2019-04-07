@@ -21,7 +21,7 @@
     "glob": "^7.1.2",
     "js-yaml": "^3.10.0",
     "normalize-path": "^3.0.0",
-    "object-keys": "^1.0.11",
+    "object-keys": "^1.1.1",
     "object-values": "^2.0.0",
     "pify": "^3.0.0",
     "smarkt": "0.0.6",
