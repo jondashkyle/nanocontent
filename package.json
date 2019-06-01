@@ -30,7 +30,7 @@
     "xtend": "^4.0.1"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^2.0.0",
     "standard": "^11.0.1"
   }
 }
