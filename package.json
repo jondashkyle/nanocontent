@@ -27,7 +27,7 @@
     "smarkt": "0.0.6",
     "static-module": "^2.2.5",
     "through2": "^2.0.3",
-    "xtend": "^4.0.1"
+    "xtend": "^4.0.2"
   },
   "devDependencies": {
     "ava": "^0.25.0",
