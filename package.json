@@ -18,7 +18,7 @@
     "url": "git+https://github.com/jondashkyle/nanocontent.git"
   },
   "dependencies": {
-    "glob": "^7.1.2",
+    "glob": "^7.1.6",
     "js-yaml": "^3.10.0",
     "normalize-path": "^3.0.0",
     "object-keys": "^1.0.11",
