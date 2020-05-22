@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "glob": "^7.1.2",
-    "js-yaml": "^3.10.0",
+    "js-yaml": "^3.14.0",
     "normalize-path": "^3.0.0",
     "object-keys": "^1.0.11",
     "object-values": "^2.0.0",
